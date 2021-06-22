@@ -1,17 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const app = express();
+/* const app = express() */;
 const bcrypt = require("bcrypt");
 const cifrarContrasenia = require("./cifrarContrasenia")
 
-app.use((req,res,next) => {
+/* app.use((req,res,next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
     );
     next();  
-});
+}); */
 
 router.post("/registro", cifrarContrasenia, function(req, res) {
     let db = req.app.locals.db

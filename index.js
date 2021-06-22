@@ -3,12 +3,12 @@ const MongoClient = require("mongodb").MongoClient;
 const app = express();
 /* const bcrypt = require("bcrypt");
 const cifrarContrasenia = require("./cifrarContrasenia") */
-const cors = require("cors")
+/* const cors = require("cors") */
 
 
 let usuarios = require("./usuarios")
 
-app.use(cors());
+/* app.use(cors()); */
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
